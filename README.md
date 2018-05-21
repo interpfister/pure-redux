@@ -6,6 +6,6 @@ P.S. Yes, I'm aware that even Dan Abramov himself advocates for the use of compo
 
 ## Usage:
 
-`npm install pure-redux`
+`npm install pure-redux -g`
 
-Run `pure-redux` via npm scripts or install globally.
+Navigate to your source directory and run `pure-redux`.

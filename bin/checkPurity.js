@@ -7,7 +7,7 @@ const options = {
   ignorePaths: ['node_modules'],
 }
 
-findInFiles.find('setState', '.', '.(js|ts)$')
+findInFiles.find('setState', '.', '.(js|ts|jsx|tsx)$')
     .then((results) => {
 		const setStateMentionCount = Object.keys(results).reduce((accumulator, currentResult) => {
 			console.log(`Found setState in ${currentResult}`);
@@ -16,8 +16,10 @@ findInFiles.find('setState', '.', '.(js|ts)$')
 		
 		sloc(options).then((res) => {
 		  const totalLines = res.sloc.sloc;
+		  console.log(`Total Lines: ${totalLines}`);
+		  console.log(`Total setState mentions: ${setStateMentionCount}`);
 		  const pureReduxRatio = 1 - (setStateMentionCount / totalLines);
-		  const pureReduxPercentage = (pureReduxRatio * 100).toFixed(2);
+		  const pureReduxPercentage = (pureReduxRatio * 100);
 		  console.log(`Redux Purity Percentage: ${pureReduxPercentage}%`);
 		  if (pureReduxPercentage === 100) {
 			  console.log('PURE REDUX ACHIEVED');
