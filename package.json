@@ -1,0 +1,11 @@
+{
+  "name": "pure-redux",
+  "version": "1.0.0",
+  "description": "Measures the purity of your Redux implementation. The fewer uses of `setState`, the higher your purity!",
+  "main": "index.js",
+  "author": "interpfister@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "sloc": "^0.2.0"
+  }
+}
