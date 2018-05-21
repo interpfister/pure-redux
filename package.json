@@ -1,6 +1,6 @@
 {
   "name": "pure-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Measures the purity of your Redux implementation. The fewer uses of `setState`, the higher your purity!",
   "main": "index.js",
   "author": "interpfister@gmail.com",
@@ -8,7 +8,7 @@
   "bin": {
     "pure-redux": "bin/checkPurity.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "find-in-files": "^0.5.0",
 	"node-sloc": "^0.1.10"
   }
